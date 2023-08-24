@@ -225,7 +225,7 @@
     width: 80%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
     .aboutSection {
         padding: 2rem 1rem;
     }
@@ -252,7 +252,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
     .aboutImg {
         width: 80%
     }

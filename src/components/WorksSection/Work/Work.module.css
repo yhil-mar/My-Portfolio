@@ -17,7 +17,7 @@
     filter: brightness(0.7);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 
     .workImage {
         aspect-ratio: 2 / 3;
@@ -25,7 +25,7 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
 
     .workImage {
         aspect-ratio: 1 / 1;

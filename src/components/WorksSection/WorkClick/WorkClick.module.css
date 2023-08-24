@@ -164,7 +164,7 @@
     color: var(--dark-first-color);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 
     .workClickContainer {
         width: 40rem;
@@ -179,7 +179,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
 
     .workClickContainer {
         display: flex;
