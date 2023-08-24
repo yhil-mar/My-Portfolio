@@ -1,0 +1,21 @@
+/* .light {
+    color: var(--color-main-light);
+    background-color: var(--bColor-main-light);
+    transition: background-color 0.3s ease;
+}
+
+.dark {
+    color: var(--color-main-dark);
+    background-color: var(--bColor-main-dark);
+    transition: background-color 0.3s ease;
+} */
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* overflow-y: auto; */
+    /* height: 88vh; */
+    /* background-color: aquamarine; */
+}

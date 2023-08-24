@@ -1,0 +1,25 @@
+.light {
+    color: var(--color-main-light);
+    background-color: var(--bColor-main-light);
+    transition: background-color 0.3s ease;
+}
+
+.dark {
+    color: var(--color-main-dark);
+    background-color: var(--bColor-main-dark);
+    transition: background-color 0.3s ease;
+}
+
+.SSContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 85%;
+    height: 30rem;
+    margin-bottom: 3rem;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+
+}

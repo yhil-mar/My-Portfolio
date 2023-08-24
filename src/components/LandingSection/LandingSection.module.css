@@ -1,0 +1,86 @@
+.light {
+    color: var(--white-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+}
+
+.landingContainer {
+    background-image: url('/images/landing_wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+    width: 100%;
+    
+    cursor: default;
+}
+
+.imageOpacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    min-height: 100vh;
+
+    transition: background-color 0.3s ease, color 0.3s;
+}
+
+.imageOpacity.light {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.imageOpacity.dark {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.mainText {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: var(--step-5);
+    line-height: var(--step-5);
+}
+
+.contactButton {
+    padding: 1rem;
+
+    border-radius: 0.7rem;
+
+    text-decoration: none;
+
+    font-size: var(--step-2);
+    /* line-height: var(--step-2); */
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.contactButton.light {
+    background-color: var(--light-second-color);
+}
+
+.contactButton.dark {
+    background-color: var(--dark-second-color);
+}
+
+.contactButton.light:hover {
+    background-color: var(--light-first-alpha-color);
+}
+
+.contactButton.dark:hover {
+    background-color: var(--dark-first-alpha-color);
+}
+
+.contactButton.light:active {
+    background-color: var(--light-second-color);
+}
+
+.contactButton.dark:active {
+    background-color: var(--dark-first-color);
+}

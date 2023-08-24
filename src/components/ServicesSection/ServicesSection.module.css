@@ -1,0 +1,90 @@
+.light {
+    color: var(--light-text-color);
+    background-color: var(--gray-light-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-bg-darker-color);
+}
+
+.servicesSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2.5rem;
+
+    transition: background-color 0.3s ease;
+}
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: var(--max-width);
+
+    cursor: default;
+
+    transition: background-color 0.3s ease;
+
+    /* scroll-margin-inline: 1rem; */
+}
+
+.servicesContainer :nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+.titleSection {
+    grid-column: span 3;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.title {
+    margin: 1rem;
+}
+
+.titleSection.light {
+    border-top: solid 0.2rem var(--light-second-color);
+    border-bottom: solid 0.2rem var(--light-second-color);
+}
+
+.titleSection.dark {
+    border-top: solid 0.2rem var(--dark-second-color);
+    border-bottom: solid 0.2rem var(--dark-second-color);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .servicesSection {
+        padding: 2rem 1rem;
+    }
+
+    .servicesContainer {
+        grid-template-columns: repeat(2, minmax(45%, 1fr));
+        width: 90%;
+    }
+
+    .titleSection {
+        grid-column: span 2;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+}

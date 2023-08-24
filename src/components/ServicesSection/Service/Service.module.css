@@ -1,0 +1,41 @@
+.serviceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0.1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.1);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+.serviceContainer.dark {
+    background-color: var(--dark-bg-color);
+}
+
+/* .serviceContainer.light:hover {
+    border: 0.2rem solid var(--light-second-color);
+}
+
+.serviceContainer.dark:hover {
+    border: 0.2rem solid var(--dark-second-color);
+} */
+
+.serviceIcon {
+    transition: fill 0.3s ease;
+}
+
+.serviceIcon.light {
+    fill: var(--light-second-color);
+}
+
+.serviceIcon.dark {
+    fill: var(--dark-second-color);
+}
+
+.serviceDescription {
+    line-height: var(--step-2);
+}

@@ -1,0 +1,197 @@
+.light {
+    color: var(--white-color);
+    background-color: var(--light-first-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-first-color);
+}
+
+.headerSection {
+
+    position: fixed;
+    z-index: 999;
+
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+
+    box-shadow: 0 0.2rem 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.6s ease;
+}
+
+.headerHidden {
+    transform: translateY(-4rem);
+}
+
+.navContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.leftContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imgContainer {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    transition: opacity 1s ease, background-color 0.3s ease;
+}
+
+.imgContainer:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.imgContainer:active {
+    background-color: var(--gray-color);
+}
+
+.imgTheme {
+    height: 100%;
+    width: 100%;
+}
+
+.navLogo {
+    font-size: 2rem;
+    line-height: 2rem;
+    cursor: default;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+}
+
+.navButton {
+    display: none;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, fill 0.3s ease, opacity 0.3s ease;
+}
+
+.navButton:hover {
+    opacity: 40%;
+}
+
+.iconButton {
+    height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.iconButton.light {
+    fill: var(--white-color);
+}
+
+.iconButton.dark {
+    fill: var(--dark-text-color);
+}
+
+.menuButton {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    cursor: pointer;
+}
+
+.menuButton.light:hover {
+    color: var(--light-second-color);
+}
+
+.menuButton.dark:hover {
+    color: var(--dark-second-color);
+}
+
+.menuButton.light:active {
+    color: var(--white-color);
+}
+
+.menuButton.dark:active {
+    color: var(--dark-text-color);
+}
+
+@media screen and (max-width: 1024px) {
+    .headerSection {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    .headerHidden {
+        transform: none;
+    }
+
+    .menuContainer {
+        position: fixed;
+        left: 0;
+        bottom: 4rem;
+        flex-direction: column;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .menuVisible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navButton {
+        display: flex;
+    }
+
+    .menuButton {
+        padding: 1rem;
+    }
+
+    .menuButton.light {
+        background-color: var(--light-first-alpha-color);
+    }
+
+    .menuButton.dark {
+        background-color: var(--dark-first-alpha-color);
+    }
+
+    .menuButton.light:hover {
+        background-color: var(--light-second-color);
+        color: var(--white-color);
+    }
+
+    .menuButton.dark:hover {
+        background-color: var(--dark-second-color);
+        color: var(--dark-text-color);
+    }
+
+    .menuButton.light:active {
+        background-color: var(--light-second-alpha-color);
+    }
+
+    .menuButton.dark:active {
+        background-color: var(--dark-second-alpha-color);
+    }
+}

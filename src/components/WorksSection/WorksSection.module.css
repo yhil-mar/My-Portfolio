@@ -1,0 +1,115 @@
+.light {
+    color: var(--light-text-color);
+    background-color: var(--white-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-bg-color);
+}
+
+.worksSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 4rem 2.5rem;
+
+    transition: background-color 0.3s ease;
+}
+
+.worksContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(45%, 1fr));
+
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: var(--max-width);
+
+    cursor: default;
+
+    /* scroll-margin-top: 2rem; */
+
+    transition: background-color 0.3s ease, color 0.3s;
+}
+
+.titleSection {
+    grid-column: span 2;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.title {
+    margin: 1rem;
+    font-size: var(--step-3);
+    font-weight: bold;
+}
+
+.titleSection.light {
+    border-top: solid 0.2rem var(--light-second-color);
+    border-bottom: solid 0.2rem var(--light-second-color);
+}
+
+.titleSection.dark {
+    border-top: solid 0.2rem var(--dark-second-color);
+    border-bottom: solid 0.2rem var(--dark-second-color);
+}
+
+.work {
+    position: relative;
+}
+
+.messageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.message {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.message2 {
+    color: #07BFFF;
+}
+
+.isVisible {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .worksSection {
+        padding: 2rem 1rem;
+    }
+
+    .titleSection {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .worksContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 0;
+    }
+
+    .message {
+        display: none;
+    }
+
+}

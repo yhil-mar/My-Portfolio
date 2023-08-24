@@ -1,0 +1,92 @@
+.light {
+    color: var(--light-text-color);
+    background-color: var(--gray-light-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-bg-darker-color);
+}
+
+.contactSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2.5rem;
+
+    transition: background-color 0.3s ease;
+}
+
+.contactContainer {
+    display: grid;
+    /* grid-template-columns: repeat(3, 30%); */
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: var(--max-width);
+
+    cursor: default;
+
+    transition: background-color 0.3s ease;
+
+    /* scroll-margin-top: 2rem; */
+}
+
+.titleSection {
+    grid-column: span 3;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.title {
+    margin: 1rem;
+}
+
+.titleSection.light {
+    border-top: solid 0.2rem var(--light-second-color);
+    border-bottom: solid 0.2rem var(--light-second-color);
+}
+
+.titleSection.dark {
+    border-top: solid 0.2rem var(--dark-second-color);
+    border-bottom: solid 0.2rem var(--dark-second-color);
+}
+
+.contactContainer :nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .contactSection {
+        padding: 2rem 1rem;
+    }
+
+    .contactContainer {
+        /* grid-template-columns: repeat(2, 45%); */
+        grid-template-columns: repeat(2, minmax(45%, 1fr));
+        width: 90%;
+    }
+
+    .titleSection {
+        grid-column: span 2;
+        margin-bottom: 0rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+}

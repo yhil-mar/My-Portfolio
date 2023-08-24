@@ -1,0 +1,30 @@
+.light {
+    color: var(--white-color);
+    background-color: var(--light-second-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-second-color);
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 6rem;
+
+    /* box-shadow: 0 0.2rem 0.5rem 0.3rem rgba(0, 0, 0, 0.2); */
+
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .footerContainer {
+        height: 4rem;
+        margin-bottom: 4rem;
+    }
+}

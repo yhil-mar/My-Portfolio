@@ -1,0 +1,82 @@
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+
+    box-shadow: 0 0.1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.1);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+.contactContainer.dark {
+    background-color: var(--dark-bg-color);
+}
+
+.contactIcon {
+    margin: 0.3rem 0.3rem 1.5rem 0.3rem;
+    transition: fill 0.3s ease;
+}
+
+.contactIcon.light {
+    fill: var(--light-second-color);
+}
+
+.contactIcon.dark {
+    fill: var(--dark-second-color);
+}
+
+.contactInfo {
+    font-size: var(--step-0);
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.contactInfo.light {
+    color: var(--light-text-color);
+}
+
+.contactInfo.dark {
+    color: var(--dark-text-color);
+}
+
+.contactInfo.light:hover {
+    color: var(--light-second-color);
+}
+
+.contactInfo.dark:hover {
+    color: var(--dark-second-color);
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon {
+    transition: transform 0.5s ease, fill 0.3s ease;
+}
+
+.icon.light {
+    fill: var(--light-text-color);
+}
+
+.icon.dark {
+    fill: var(--dark-text-color);
+}
+
+.icon.light:hover {
+    transform: rotateZ(-10deg);
+    fill: var(--light-second-color);
+}
+
+.icon.dark:hover {
+    transform: rotateZ(-10deg);
+    fill: var(--dark-second-color);
+}

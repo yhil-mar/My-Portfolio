@@ -1,0 +1,66 @@
+.light {
+    color: var(--white-color);
+    background-color: var(--light-first-alpha-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-first-alpha-color);
+}
+
+.workHoverContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 1000; */
+    opacity: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hoverInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    padding: 2rem;
+    border: solid 0.1rem var(--white-color);
+}
+
+.hoverInfo {
+    line-height: var(--step-3);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {}
+
+
+@media screen and (max-width: 768px) {
+
+    .workHoverContainer {
+        padding: 1rem;
+    }
+
+    .hoverInfoContainer {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .hoverInfo {
+        font-weight: normal;
+        line-height: var(--step-1);
+    }
+
+}

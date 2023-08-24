@@ -1,0 +1,166 @@
+.light {
+    color: var(--light-text-color);
+    background-color: var(--white-color);
+}
+
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-second-color);
+}
+
+.workModalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.6s 0.6s;
+
+    --transform: translateY(100vh);
+    --transition: transform 0.6s;
+}
+
+.isOpen {
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 0.6s;
+
+    --transform: translateY(0);
+    --transition: transform 0.6s 0.6s;
+}
+
+.workClickContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    position: absolute;
+
+    cursor: default;
+
+    width: 40rem;
+    max-width: var(--max-width);
+
+    padding: 2rem;
+
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: var(--step--1);
+    line-height: var(--step--1);
+
+    width: 2rem;
+    height: 2rem;
+    margin: 0.4rem;
+    padding: 0;
+    border-radius: 2rem;
+    z-index: 999;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.closeButton.light {
+    background-color: #ccccccca;
+}
+
+.closeButton.dark {
+    background-color: var(--dark-first-alpha-color);
+}
+
+.closeButton.light:hover {
+    background-color: #666666ca;
+    color: var(--dark-text-color);
+}
+
+.closeButton.dark:hover {
+    background-color: #ffffffca;
+    color: var(--light-text-color);
+}
+
+.workImage {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.workImage.dark {
+    filter: brightness(0.9);
+}
+
+.workClickTitle.light {
+    border-bottom: solid 0.2rem var(--light-second-color);
+}
+
+.workClickTitle.dark {
+    border-bottom: solid 0.2rem var(--dark-first-color);
+}
+
+.workClickInfo {
+    line-height: var(--step-2);
+}
+
+.specsContainer {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    gap: 1rem;
+    font-size: var(--step--1);
+}
+
+.specsContainer :nth-child(8) {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.specsContainer.light :nth-child(8) {
+    color: var(--light-text-color);
+}
+
+.specsContainer.dark :nth-child(8) {
+    color: var(--dark-text-color);
+}
+
+.specsContainer.light :nth-child(8):hover {
+    color: var(--light-second-color);
+}
+
+.specsContainer.dark :nth-child(8):hover {
+    color: var(--dark-first-color);
+}
+
+@media screen and (max-width: 768px) {
+
+    .workClickContainer {
+        width: auto;
+        padding: 1rem;
+    }
+
+    .workImage {
+        border-radius: 0.5rem;
+    }
+}
