@@ -7,15 +7,25 @@
 }
 
 .landingContainer {
-    background-image: url('/images/landing_wallpaper.jpg');
+    /* background-image: url('/images/landing_wallpaper.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    
+
     width: 100%;
-    
+
     cursor: default;
+
+    transition: all 0.5s;
+}
+
+.landingContainer.light {
+    background-image: url('/images/landing_wallpaper_light_1.jpg');
+}
+
+.landingContainer.dark {
+    background-image: url('/images/landing_wallpaper_dark_1.jpg');
 }
 
 .imageOpacity {
@@ -40,7 +50,7 @@
 }
 
 .mainText {
-    margin: 0;
+    margin-top: 6rem;
     font-weight: bold;
     text-align: center;
     font-size: var(--step-5);
@@ -84,3 +94,11 @@
 .contactButton.dark:active {
     background-color: var(--dark-first-color);
 }
+
+@media screen and (max-width: 1024px) {
+    .landingContainer {
+        background-position: 55%;
+    }
+}
+
+@media screen and (max-width: 700px) {}
