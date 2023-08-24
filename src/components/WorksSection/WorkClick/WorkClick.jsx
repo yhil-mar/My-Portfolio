@@ -9,11 +9,15 @@ const WorkClick = ({ theme, isOpen, closeWork, srcImage, workTitle, workInfo, wo
 
                 <span className={`${style[theme]} ${style.closeButton}`}>✖</span>
 
-                <img className={`${style[theme]} ${style.workImage}`} src={srcImage} />
+                <div className={style.imageContainer}>
+                    <img className={`${style[theme]} ${style.workImage}`} src={srcImage} />
+                </div>
 
                 <h3 className={`${style[theme]} ${style.workClickTitle}`}>{workTitle}</h3>
 
-                <span className={style.workClickInfo}>{workInfo}</span>
+                <span className={style.workClickInfo}>
+                    {workInfo}
+                </span>
 
                 <section className={`${style[theme]} ${style.specsContainer}`}>
                     <span><b>Cliente:</b></span>

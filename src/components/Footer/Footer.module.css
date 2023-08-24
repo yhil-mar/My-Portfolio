@@ -21,7 +21,7 @@
     transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     
     .footerContainer {
         height: 4rem;

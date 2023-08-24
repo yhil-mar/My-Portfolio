@@ -61,7 +61,7 @@
     grid-column: 2 / 3;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 
     .contactSection {
         padding: 2rem 1rem;
@@ -79,7 +79,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .contactContainer {
         display: flex;

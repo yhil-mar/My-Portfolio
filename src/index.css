@@ -31,6 +31,8 @@
   /********** Medidas caja **********/
 
   --max-width: 1200px;
+  --media-query-tablet: 1023px;
+  --media-query-phone: 767px;
 
   /********** Fuentes para texto **********/
 

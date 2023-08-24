@@ -9,7 +9,7 @@ const LandingSection = () => {
     return (
         <section id='landingSection' className={`${style[theme]} ${style.landingContainer}`}>
             <aside className={`${style[theme]} ${style.imageOpacity}`}>
-                <h1 className={`${style[theme]} ${style.mainText}`}>Bienvenidos<br />a mi sitio</h1>
+                <h1 className={`${style[theme]} ${style.mainText}`}>Bienvenidos</h1>
                 <a className={`${style[theme]} ${style.contactButton}`} href='#contactSection'>Contáctame</a>
             </aside>
         </section>
