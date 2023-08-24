@@ -130,7 +130,16 @@
 }
 
 .workClickInfo {
+    padding-right: 1rem;
     line-height: var(--step-2);
+}
+
+.workClickInfo.light {
+    border-right: solid 0.2rem var(--light-second-color);
+}
+
+.workClickInfo.dark {
+    border-right: solid 0.2rem var(--dark-first-color);
 }
 
 .specsContainer {
@@ -141,6 +150,7 @@
     align-items: center;
     gap: 1rem;
     font-size: var(--step--1);
+    line-height: var(--step-2);
 }
 
 .specsContainer :nth-child(8) {
@@ -199,5 +209,17 @@
     .workImage {
         width: 100%;
         border-radius: 0.5rem;
+    }
+
+    .workClickInfo.light,
+    .specsContainer.light {
+        border-right: 0;
+        border-bottom: solid 0.2rem var(--light-second-color);
+    }
+
+    .workClickInfo.dark,
+    .specsContainer.dark {
+        border-right: 0;
+        border-bottom: solid 0.2rem var(--dark-first-color);
     }
 }

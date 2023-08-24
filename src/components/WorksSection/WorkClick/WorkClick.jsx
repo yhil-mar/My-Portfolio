@@ -15,7 +15,7 @@ const WorkClick = ({ theme, isOpen, closeWork, srcImage, workTitle, workInfo, wo
 
                 <h3 className={`${style[theme]} ${style.workClickTitle}`}>{workTitle}</h3>
 
-                <span className={style.workClickInfo}>
+                <span className={`${style[theme]} ${style.workClickInfo}`}>
                     {workInfo}
                 </span>
 
