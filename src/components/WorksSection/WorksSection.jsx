@@ -34,7 +34,7 @@ const WorkSection = () => {
             workClient: 'Propio',
             workDate: '23/08/2023',
             workType: 'Porfolios y conexión profesional',
-            workURL: 'En construcción...',
+            workURL: 'https://my-portfolio-yhil-mar.vercel.app/',
             workImage: "/images/portfolio_project_1.PNG"
         }
 
