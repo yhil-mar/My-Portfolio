@@ -20,7 +20,7 @@ const Contact = ({ theme, paths, viewBox, typeContact, info, href }) => {
                         {info[0].map(path => {
                             iconsCounter++;
                             return <a key={path} className={`${style[theme]} ${style.contactInfo}`} href={href[iconsCounter]} target='_blank'>
-                                <svg className={`${style[theme]} ${style.icon}`} xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox={info[1]}>
+                                <svg className={`${style[theme]} ${style.icon}`} xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox={info[1][iconsCounter]}>
                                     <path d={path} />
                                 </svg>
                             </a>
