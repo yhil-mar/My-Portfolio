@@ -38,7 +38,7 @@ const AboutSection = () => {
 
                 <article className={style.aboutArticle}>
                     <h2 className={style.aboutName}>Yhilmar Sánchez</h2>
-                    <h6 className={style.aboutProf}>Desarrollador Web Full Stack</h6>
+                    <h6 className={style.aboutProf}>Desarrollador Web Front-End</h6>
                     <div className={style.aboutImgContainer}>
                         <img className={`${style[theme]} ${style.aboutImg}`} src='/images/foto_perfil.png' />
                     </div>
@@ -47,7 +47,7 @@ const AboutSection = () => {
 
                 <article className={style.aboutArticle}>
                     <p className={style.aboutParagraph}>
-                        Soy Colombiano 🇨🇴, nací en una pequeña ciudad ubicada al sur de mi país, San Juan de Pasto.
+                        Soy Colombiano, nací en una pequeña ciudad ubicada al sur de mi país, San Juan de Pasto.
                     </p> <br />
                     <p className={style.aboutParagraph}>
                         Al terminar mis estudios secundarios mi pasión por la programación comenzó a hacerse presente.
@@ -56,8 +56,9 @@ const AboutSection = () => {
                         Estudié Ingeniería Civil, obtuve mi título profesional, y dentro de la carrera conocí sobre el mundo de la programación, conocimientos básicos pero suficientes para tener claro mi motivación de cara al futuro.
                     </p> <br />
                     <p className={style.aboutParagraph}>
-                        Soy desarrollador Full Stack, me desempeño en el lado del desarrollo Front-End haciendo uso de tecnologías como JavaScript | React | redux | HTML | CSS, y en el lado del desarrollo Back-End con las tecnologías NodeJs | JavaScript | Express | PostgreSQL | Sequelize.
+                        Durante mi trayectoria laboral, he tenido la oportunidad de trabajar en proyectos que me han ayudado a profundizar mi experiencia en el desarrollo Front-End, influyendo en mi capacidad para crear interfaces más intuitivas y satisfactorias, basadas en las preferencias del usuario | Colaborar en equipos multidisciplinarios | Solucionar problemas complejos.
                     </p>
+
                 </article>
 
                 <article className={style.aboutArticle}>
