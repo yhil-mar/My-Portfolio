@@ -42,7 +42,7 @@ const AboutSection = () => {
                     <div className={style.aboutImgContainer}>
                         <img className={`${style[theme]} ${style.aboutImg}`} src='/images/foto_perfil.png' />
                     </div>
-                    <a className={`${style[theme]} ${style.aboutButton}`} href='https://drive.google.com/file/d/18rZ0mTupLyV68AXlRV-Q2yxvUqXsYzsa/view?usp=sharing' target='_blank'>Descarga mi CV</a>
+                    <a className={`${style[theme]} ${style.aboutButton}`} href='https://drive.google.com/file/d/1V6lNW452eQHB8iChtV_rZYocJfvzxej_/view?usp=sharing' target='_blank'>Descarga mi CV</a>
                 </article>
 
                 <article className={style.aboutArticle}>
