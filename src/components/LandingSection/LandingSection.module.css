@@ -11,9 +11,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 
     width: 100%;
+    height: 100vh;
 
     cursor: default;
 
@@ -107,6 +108,6 @@
 
 @media screen and (max-width: 700px) {
     .landingContainer {
-        background-size: auto;
+        background-size: auto 900px;
     }
 }
