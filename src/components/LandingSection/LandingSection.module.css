@@ -97,7 +97,11 @@
 
 @media screen and (max-width: 1024px) {
     .landingContainer {
-        background-position: 55%;
+        background-size: auto 100%;
+    }
+
+    .mainText {
+        margin-top: 4rem;
     }
 }
 
