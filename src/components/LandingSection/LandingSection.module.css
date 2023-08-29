@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 1024px) {
     .landingContainer {
-        background-size: auto 100%;
+        background-size: auto 1400px;
     }
 
     .mainText {
@@ -105,4 +105,8 @@
     }
 }
 
-@media screen and (max-width: 700px) {}
+@media screen and (max-width: 700px) {
+    .landingContainer {
+        background-size: auto;
+    }
+}
