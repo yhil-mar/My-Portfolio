@@ -16,7 +16,7 @@ const WorkSection = () => {
             workClient: 'Henry',
             workDate: '31/05/2023',
             workType: 'Sitio Educativo',
-            workURL: 'https://deploy-gules-eight.vercel.app/',
+            workURL: 'https://deploy-countries-eight.vercel.app/',
             workImage: "/images/countries_project_1.PNG"
         },
         rickAndMortyWork: {
