@@ -4,20 +4,44 @@ import Main from './components/Main/Main';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import Footer from './components/Footer/Footer';
+import { useEffect, useState } from 'react';
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
 function App() {
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.scroll({ top: 0, behavior: 'auto' });
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3500);
+  }, [])
+
   return (
-    <div className='appContainer'>
-      <ThemeProvider>
-        {/* <LanguageProvider> */}
-        <Header />
-        <Main />
-        <Footer />
-        {/* </LanguageProvider> */}
-      </ThemeProvider>
-    </div>
+
+    < div className='appContainer' >
+
+      {
+        isLoading
+
+          ? <LoadingScreen />
+
+          : (
+            <ThemeProvider>
+              {/* <LanguageProvider> */}
+              <Header />
+              <Main />
+              <Footer />
+              {/* </LanguageProvider> */}
+            </ThemeProvider>
+          )
+      }
+      
+    </div >
+
   )
+
 }
 
 export default App
