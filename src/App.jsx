@@ -12,6 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    window.history.replaceState({}, document.title, window.location.pathname);
     window.scroll({ top: 0, behavior: 'auto' });
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -37,7 +38,7 @@ function App() {
             </ThemeProvider>
           )
       }
-      
+
     </div >
 
   )
