@@ -1,11 +1,11 @@
 import style from './Contact.module.css';
 
-const Contact = ({ theme, paths, viewBox, typeContact, info, href }) => {
+const Contact = ({ theme, paths, viewBox, typeContact, info, href, inView, animation, element }) => {
 
     let iconsCounter = -1;
 
     return (
-        <section className={`${style[theme]} ${style.contactContainer}`}>
+        <section className={`${style[theme]} ${style.contactContainer} ${inView ? style.unset : ''}`} data-animation={animation} element-animated={element}>
             <svg className={`${style[theme]} ${style.contactIcon}`} xmlns="http://www.w3.org/2000/svg" height="2.5rem" viewBox={viewBox}>
                 {paths.map(path => {
                     return <path key={path} d={path} />

@@ -4,6 +4,7 @@ import WorkHover from './WorkHover/WorkHover';
 import { useState, useContext } from 'react';
 import WorkClick from './WorkClick/WorkClick';
 import ThemeContext from '../../context/ThemeContext';
+import AnimatedComponent from '../AnimatedComponent/AnimatedComponent';
 
 const WorkSection = () => {
 
@@ -73,33 +74,48 @@ const WorkSection = () => {
                     <h2 className={style.title}>Mis Trabajos</h2>
                 </section>
 
-                <section className={style.work} onClick={!isWorkOpen ? openWork : undefined}>
-                    <Work theme={theme} src={typeWorks.paisesWork.workImage} />
-                    <WorkHover theme={theme} id='paisesWork' titleWork={typeWorks.paisesWork.workTitle} workInfo={typeWorks.paisesWork.workInfo} />
-                </section>
+                <AnimatedComponent threshold={0.25}>
+                    {(inView) => (
+                        <section className={`${style.work} ${inView ? style.unset : ''}`} onClick={!isWorkOpen ? openWork : undefined} data-animation='right' element-animated='firstWork'>
+                            <Work theme={theme} src={typeWorks.paisesWork.workImage} />
+                            <WorkHover theme={theme} id='paisesWork' titleWork={typeWorks.paisesWork.workTitle} workInfo={typeWorks.paisesWork.workInfo} />
+                        </section>
+                    )}
+                </AnimatedComponent>
 
+                <AnimatedComponent threshold={0.25}>
+                    {(inView) => (
+                        <section className={`${style.work} ${inView ? style.unset : ''}`} onClick={!isWorkOpen ? openWork : undefined} data-animation='right' element-animated='secondWork'>
+                            <Work theme={theme} src={typeWorks.rickAndMortyWork.workImage} />
+                            <WorkHover theme={theme} id='rickAndMortyWork' titleWork={typeWorks.rickAndMortyWork.workTitle} workInfo={typeWorks.rickAndMortyWork.workInfo} />
+                        </section>
+                    )}
+                </AnimatedComponent>
 
-                <section className={style.work} onClick={!isWorkOpen ? openWork : undefined}>
-                    <Work theme={theme} src={typeWorks.rickAndMortyWork.workImage} />
-                    <WorkHover theme={theme} id='rickAndMortyWork' titleWork={typeWorks.rickAndMortyWork.workTitle} workInfo={typeWorks.rickAndMortyWork.workInfo} />
-                </section>
+                <AnimatedComponent threshold={0.25}>
+                    {(inView) => (
+                        <section className={`${style.work} ${inView ? style.unset : ''}`} onClick={!isWorkOpen ? openWork : undefined} data-animation='right' element-animated='thirdWork'>
+                            <Work theme={theme} src={typeWorks.portfolioWork.workImage} />
+                            <WorkHover theme={theme} id='portfolioWork' titleWork={typeWorks.portfolioWork.workTitle} workInfo={typeWorks.portfolioWork.workInfo} />
+                        </section>
+                    )}
+                </AnimatedComponent>
 
-                <section className={style.work} onClick={!isWorkOpen ? openWork : undefined}>
-                    <Work theme={theme} src={typeWorks.portfolioWork.workImage} />
-                    <WorkHover theme={theme} id='portfolioWork' titleWork={typeWorks.portfolioWork.workTitle} workInfo={typeWorks.portfolioWork.workInfo} />
-                </section>
+                <AnimatedComponent threshold={0.25} className={style.messageContainer}>
+                    {(inView) => (
+                        <section className={`${style.messageContainer} ${inView ? style.unset : ''}`} data-animation='right' element-animated='fourthWork'>
+                            <h4 className={`${style.message} ${!changeMessage ? style.isVisible : ''}`} onClick={handleClick}>
+                                Lo sé, lo sé.
+                                <br />
+                                Estamos trabajando en ello...
+                            </h4>
 
-                <section className={style.messageContainer}>
-                    <h4 className={`${style.message} ${!changeMessage ? style.isVisible : ''}`} onClick={handleClick}>
-                        Lo sé, lo sé.
-                        <br />
-                        Estamos trabajando en ello...
-                    </h4>
-
-                    <h4 className={`${style.message} ${style.message2} ${changeMessage ? style.isVisible : ''}`} onClick={handleClick}>
-                        2 ထ 1
-                    </h4>
-                </section>
+                            <h4 className={`${style.message} ${style.message2} ${changeMessage ? style.isVisible : ''}`} onClick={handleClick}>
+                                2 ထ 1
+                            </h4>
+                        </section>
+                    )}
+                </AnimatedComponent>
 
                 <WorkClick
                     theme={theme}

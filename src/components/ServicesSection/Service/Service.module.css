@@ -5,6 +5,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    height: 100%;
     text-align: center;
     box-shadow: 0 0.1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.1);
 
@@ -38,4 +39,35 @@
 
 .serviceDescription {
     line-height: var(--step-2);
+}
+
+
+[data-animation='show'] {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+
+    --opacity: 1;
+    --transform: scaleY(1);
+}
+
+[element-animated='first'] {
+    transition: 0.6s ease-in-out;
+}
+
+[element-animated='second'] {
+    transition: 0.6s ease-in-out;
+}
+
+[element-animated='third'] {
+    transition: 0.6s ease-in-out;
+}
+
+[element-animated='fourth'] {
+    transition: 0.6s ease-in-out;
+}
+
+.unset {
+    opacity: var(--opacity);
+    transform: var(--transform);
 }

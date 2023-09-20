@@ -170,12 +170,15 @@
         flex-direction: column;
         width: 100%;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transform: scaleY(0) scaleX(0);
+        transform-origin: 100% 100%;
+        transition: all 0.3s ease;
         pointer-events: none;
     }
 
     .menuVisible {
         opacity: 1;
+        transform: scaleY(1) scaleX(1);
         pointer-events: auto;
     }
 

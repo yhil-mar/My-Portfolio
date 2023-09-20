@@ -18,7 +18,7 @@
     transition: background-color 0.3s ease;
 }
 
-.contactContainer {
+.contactsContainer {
     display: grid;
     /* grid-template-columns: repeat(3, 30%); */
     grid-template-columns: repeat(3, minmax(30%, 1fr));
@@ -35,6 +35,10 @@
     transition: background-color 0.3s ease;
 
     /* scroll-margin-top: 2rem; */
+}
+
+.contactContainer {
+    width: 100%;
 }
 
 .titleSection {
@@ -57,7 +61,7 @@
     border-bottom: solid 0.2rem var(--dark-second-color);
 }
 
-.contactContainer :nth-child(5) {
+.contactsContainer :nth-child(5) {
     grid-column: 2 / 3;
 }
 
@@ -81,7 +85,7 @@
 
 @media screen and (max-width: 700px) {
 
-    .contactContainer {
+    .contactsContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;

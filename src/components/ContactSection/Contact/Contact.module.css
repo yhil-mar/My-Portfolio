@@ -81,3 +81,34 @@
     transform: rotateZ(-10deg);
     fill: var(--dark-second-color);
 }
+
+
+[data-animation='down'] {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+
+    --opacity: 1;
+    --transform: scaleY(1);
+}
+
+[element-animated='first'] {
+    transition: 0.6s ease-in-out;
+}
+
+[element-animated='second'] {
+    transition: 0.6s ease-in-out;
+}
+
+[element-animated='third'] {
+    transition: 0.6s ease-in-out;
+}
+
+[element-animated='fourth'] {
+    transition: 0.6s ease-in-out;
+}
+
+.unset {
+    opacity: var(--opacity);
+    transform: var(--transform);
+}

@@ -1,9 +1,9 @@
 import style from './Service.module.css';
 
-const Service = ({ theme, paths, serviceName, description }) => {
+const Service = ({ theme, paths, serviceName, description, inView, animation, element }) => {
 
     return (
-        <section className={`${style[theme]} ${style.serviceContainer}`}>
+        <section className={`${style[theme]} ${style.serviceContainer} ${inView ? style.unset : ''}`} data-animation={animation} element-animated={element}>
             <svg className={`${style[theme]} ${style.serviceIcon}`} xmlns="http://www.w3.org/2000/svg" width="2.7rem" height="2.7rem">
                 {paths.map(path => {
                     return <path key={path} d={path} />
