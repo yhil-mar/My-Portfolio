@@ -22,9 +22,9 @@ const WorkSection = () => {
         },
         rickAndMortyWork: {
             workTitle: 'Rick and Morty',
-            workInfo: 'Sitio Web con temática de la serie de televisión Rick and Morty, la cual permite buscar cualquier personaje de la serie y guardar tus favoritos. La app fue realizada con React, redux y CSS puro en el lado del Front-End, y Express, PostgreSQL y Sequelize en el lado del Back-End.',
+            workInfo: 'Sitio Web con temática de la serie de televisión Rick and Morty, la cual permite crear usuarios, buscar cualquier personaje de la serie y guardar tus favoritos. La app fue realizada con React, redux y Tailwind CSS en el lado del Front-End, y Express, PostgreSQL y Sequelize en el lado del Back-End.',
             workClient: 'Henry',
-            workDate: '23/04/2023',
+            workDate: '24/04/2024',
             workType: 'Wiki',
             workURL: 'https://p-rick-and-morty.vercel.app/',
             workImage: "/images/rickandmorty_project_1.png"
