@@ -26,7 +26,7 @@ const WorkSection = () => {
             workClient: 'Henry',
             workDate: '23/04/2023',
             workType: 'Wiki',
-            workURL: 'En construcción...',
+            workURL: 'https://p-rick-and-morty.vercel.app/',
             workImage: "/images/rickandmorty_project_1.png"
         },
         portfolioWork: {
